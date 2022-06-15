@@ -1,0 +1,60 @@
+Escreva: ("BEM VINDO A ZOMBIE DICE!!")
+Jogadores = inteiro(Escreva e leia:"Digite a quantidade de jogadores")
+Enquanto Jogadores for <= 1
+	Escreva: ("Para jogar Zombie Dice é necessário 2 ou mais jogadores")
+	Jogadores = inteiro(Escreva e leia:"Digite a quantidade de jogadores")
+	Continuar
+	Se jogador for >=2:
+	Parar
+Escreva: "RODADA 1 JOGADOR 1"
+
+jogar = texto(Escreva e leia:"É hora de rolar os dados! Digite sim para continuar")
+Enquanto jogar for diferente de "Sim":
+	Escreva: ("Quando estiver pronto, pegue os dados do pote para jogar!")
+	jogar = texto(Escreva e leia:"É hora de rolar os dados! Digite sim para continuar")
+	Continuar
+	Se jogar for igual a "Sim":
+	Parar
+
+rodada1 = 0
+Para rodada1 realizar abaixo 3 vezes:
+	dado1 <- número aleatorio entre 1-13;
+	Se dado1 for <= 3:
+		Dado_Vermelho <- dado1
+		face_dado1 <- número aleatorio entre 1-6;
+	Se a face_dado1 <=3:
+		Espingarda <- face_dado1
+		Escreva: ("Sua vitima revidou")
+	Se não for <=3 mas for face_dado1 ==4:
+		cerebro <- face_dado1
+		Escreva:("Você devorou o cérebro da sua vitima!")
+	Se não for:
+		passos <- face_dado1
+		Escreva: ("Sua vitima escapou!")
+
+	Se não for mas for dado1 for >=8:
+		Dado_Verde <- dado1
+		face_dado1 <- número aleatorio entre 1-6;
+	Se a face_dado1 <=3:
+		cerebro <- face_dado1
+		Escreva: ("Voce devorou o cerebro da sua vitima")
+	Se não for <=3 mas for face_dado1 ==4:
+		espingarda <- face_dado1
+		Escreva:("Sua vitima revidou!")
+	Se não for:
+		passos <- face_dado1
+		Escreva: ("Sua vitima escapou!")
+
+	Se não for:
+		dado_amarelo <- dado1
+		face_dado1 <- numero aleartorio entre 1-6;
+	Se face_dado1 <=2:
+		cerebro <- face_dado1
+		Escreva: ("Voce devorou o cerebro da sua vitima")
+	Se não for, mas for >=5:
+		espingarda <- face_dado1
+		Escreva: ("Sua vitima revidou")
+	Se não for:
+		passos <- face_dado1
+		Escreva: ("Sua vitima escapou!")
+Parar
